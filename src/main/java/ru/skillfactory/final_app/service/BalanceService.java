@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Optional;
 
 public interface BalanceService {
-    Balance getBalance(Long id);
+    Optional<Balance> getBalance(Long id);
     Balance takeMoney(Long id, BigDecimal sum);
     Balance putMoney(Long id, BigDecimal sum);
 }

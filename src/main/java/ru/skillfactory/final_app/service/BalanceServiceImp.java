@@ -16,8 +16,8 @@ public class BalanceServiceImp implements BalanceService{
     @Autowired
     BalanceRepository balanceRepository;
     @Override
-    public Balance getBalance(Long id) {
-        return balanceRepository.getReferenceById(id);
+    public Optional<Balance> getBalance(Long id) {
+        return balanceRepository.findById(id);
     }
 
     @Override
